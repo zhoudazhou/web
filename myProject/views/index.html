@@ -4,9 +4,91 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>hello</title>
+  <style type="text/css">
+    
+      html{color:#000;background:#FFF;} 
+      body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form, 
+      fieldset,input,textarea,p,blockquote,th,td { 
+      margin:0; 
+      padding:0; 
+      }
+
+    #myHead{
+      width: 100%;
+      background-color:blue;
+      height: 61px;
+    }
+    .headTitle{
+      display: inline-block;
+      width: 230px;   
+      background-color: brown;
+      border-top: 61px solid #fff;
+      border-right: 31px solid blue;
+    }
+    .imgBox{
+      display: block;
+      width: 128px;
+      height: 28px;
+      position: absolute;
+      top: 30px;
+      left: 40px;
+    }
+    .line1{
+      /* background-color: #4789f2; */
+      position: absolute;
+    left:230px;
+    width: 100%;
+    height: 1px;
+    top:61px;
+    background-color: red;
+    
+    }
+    .line2{
+      position: absolute;
+      left: 250px;
+      top:25px;
+      width: 100%;
+      height: 1px;
+      background-color: red;
+    }
+    .list{
+      display: inline-block;
+      
+    }
+    .ul_type{
+      list-style-type: none;
+    }
+    .li_type{
+      display: inline;
+    }
+  </style>
 </head>
 <body>
-    <p>hello</p>
+    <div id="myapp">
+        <div id = "myHead">
+          <div class="headTitle">
+              <a href="https://www.baidu.com" target="_blank" title="百度" class="imgBox">
+                <img src="/images/logo.png" alt="">
+              </a> 
+          </div>
+          <div class="line1">
+
+          </div>
+          <div class="line2">
+
+          </div>
+          <div class="list">
+            <ul class="ul_type">
+              <li class="li_type">aaa</li>
+              <li class="li_type">bb</li>
+              <li class="li_type">ccc</li>
+            </ul>
+          </div>
+          <div class="search">
+
+          </div>
+        </div>
+    </div>
 </body>
 </html>
