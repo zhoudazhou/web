@@ -18,8 +18,12 @@
       width: 100%;
       background-color:blue;
       height: 61px;
+      z-index: 2;
+      display:flex;
+      position: relative;
     }
     .headTitle{
+     
       display: inline-block;
       width: 230px;   
       background-color: brown;
@@ -31,8 +35,9 @@
       width: 128px;
       height: 28px;
       position: absolute;
-      top: 30px;
+      top: 50%;
       left: 40px;
+      /* transform: translateY(-50%); */
     }
     .line1{
       /* background-color: #4789f2; */
@@ -40,9 +45,9 @@
     left:230px;
     width: 100%;
     height: 1px;
-    top:61px;
     background-color: red;
-    
+    top:61px;
+    z-index: 1;
     }
     .line2{
       position: absolute;
@@ -51,20 +56,35 @@
       width: 100%;
       height: 1px;
       background-color: red;
+     
     }
     .list{
+      position: relative;
       display: inline-block;
-      
+      vertical-align: top;
+      padding-top:15px;
+      width: 400px;
+      text-align: center;
+      z-index: 10;
     }
     .ul_type{
-      list-style-type: none;
+      list-style-type:none;
+      
     }
     .li_type{
-      display: inline;
+      display: inline-block;
+      border: 1px solid red;
+      width: 50px;
+      border-radius: 16px;
+      margin-right: 50px;
+      z-index: 10;
+      background-color: aqua;
+     
     }
   </style>
 </head>
 <body>
+  
     <div id="myapp">
         <div id = "myHead">
           <div class="headTitle">
@@ -72,20 +92,21 @@
                 <img src="/images/logo.png" alt="">
               </a> 
           </div>
+          
+          <!-- <div class="list">
+            <ul class="ul_type">
+              <li class="li_type">aaa
+              <li class="li_type">bbb
+              <li class="li_type">ccc</li>
+            </ul>
+          </div>
           <div class="line1">
 
           </div>
           <div class="line2">
 
           </div>
-          <div class="list">
-            <ul class="ul_type">
-              <li class="li_type">aaa</li>
-              <li class="li_type">bb</li>
-              <li class="li_type">ccc</li>
-            </ul>
-          </div>
-          <div class="search">
+          <div class="search"> -->
 
           </div>
         </div>
