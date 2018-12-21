@@ -38,6 +38,7 @@
       top: 50%;
       left: 40px;
       /* transform: translateY(-50%); */
+      transform: translateY(-50%);
     }
     .line1{
       /* background-color: #4789f2; */
@@ -59,17 +60,18 @@
      
     }
     .list{
+      background-color: chartreuse;
       position: relative;
       display: inline-block;
-      vertical-align: top;
-      padding-top:15px;
-      width: 400px;
-      text-align: center;
+      flex:1;
+ 
+     
       z-index: 10;
     }
     .ul_type{
+      position: relative;
       list-style-type:none;
-      
+      text-align: center;
     }
     .li_type{
       display: inline-block;
@@ -80,6 +82,11 @@
       z-index: 10;
       background-color: aqua;
      
+    }
+    .search{
+      width: 210px;
+      height: 100%;
+      position: relative;
     }
   </style>
 </head>
@@ -93,20 +100,20 @@
               </a> 
           </div>
           
-          <!-- <div class="list">
+          <div class="list">
             <ul class="ul_type">
               <li class="li_type">aaa
               <li class="li_type">bbb
               <li class="li_type">ccc</li>
             </ul>
           </div>
-          <div class="line1">
+         <!-- <div class="line1">
 
           </div>
           <div class="line2">
 
-          </div>
-          <div class="search"> -->
+          </div> -->
+          <div class="search">
 
           </div>
         </div>
