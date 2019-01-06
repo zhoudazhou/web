@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>hello</title>
+  <style type="text/css">
+    
+      html{color:#000;background:#FFF;} 
+      body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form, 
+      fieldset,input,textarea,p,blockquote,th,td { 
+      margin:0; 
+      padding:0; 
+      }
+    #myapp{
+      min-width: 1200px;
+      background-color: #f2f6fc;
+      height: auto;
+    }
+    #myHead{
+     
+      width: 100%;
+      background-color:#3264bf;
+      height: 61px;
+      z-index: 2;
+      display:flex;
+      position: relative;
+     
+    }
+    .headTitle{
+     
+      display: inline-block;
+      width: 230px;   
+      background-color: brown;
+      border-top: 61px solid #fff;
+      border-right: 31px solid #3264bf;
+    }
+    .imgBox{
+      display: block;
+      width: 128px;
+      height: 28px;
+      position: absolute;
+      top: 50%;
+      left: 40px;
+      /* transform: translateY(-50%); */
+      transform: translateY(-50%);
+    }
+    .line1{
+      /* background-color: #4789f2; */
+      position: absolute;
+    left:230px;
+    width: 100%;
+    height: 1px;
+    background-color: #4789f2;
+    top:61px;
+    z-index: 1;
+    }
+    .line2{
+      position: absolute;
+      left: 250px;
+      top:30px;
+      width: 100%;
+      height: 1px;
+      background-color: #4789f2;
+     
+    }
+    .list{
+     
+      position: relative;
+      display: inline-block;
+      flex:1;
+      z-index: 10;
+    }
+    .ul_type{
+      position: relative;
+      list-style-type:none;
+      text-align: center;
+      top:50%;
+      transform: translateY(-50%);
+    }
+    .li_type{
+      display: inline-block;
+      border: 1px solid #4789f2;
+      width: 60px;
+      border-radius: 30px;
+      margin-right: 50px;
+      z-index: 10;
+      background-color: #4789f2;
+      color: #fff;
+     
+    }
+    .search{
+      background-color: #3264bf;
+      width: 210px;
+      height: 100%;
+      position: relative;
+    }
+    .searchBox{
+      position: relative;
+      top:50%;
+      transform: translateY(-50%);
+      width: 200px;
+      height: 50%;
+      background-color:white;
+      border-radius: 30px;
+    }
+    .serchIcon{
+      position: relative;
+      top:10px;
+      right: 10px;
+      float:right;
+
+    }
+    .login{
+      background-color: #3264bf;
+      position: relative;
+      width: 200px;
+      height: 20px;
+      text-align: center;
+      color:white;
+      font-size: 16px;
+      top:50%;
+      transform:translateY(-50%);
+    }
+    .mylogin{
+      margin-right: 30px;
+    }
+    .myRigister{
+      margin-top:0;
+    }
+    .myBody{
+      width: 1200px;
+      height: auto;
+      margin: 10px auto;
+      position: relative;
+    }
+    .leftBody{
+      width: 792px;
+      float: left;
+      background-color:white;
+    }
+    .rightBody{
+      width: 384px;
+      float: right;
+      background-color:#f2f6fc;
+    }
+    .image{
+      position: relative;
+    }
+    .image .title{
+      height: 146px;
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      color:white;
+      background-image:linear-gradient(transparent,#000);
+    }
+    .image span{
+      position: absolute;;
+      bottom: 10px;
+    }
+    .author{
+      width: 100%;
+      height: 50px;
+      /* border-bottom: 1px solid black; */
+   
+    }
+    .author h5{
+      position: relative;
+      top:10px;
+      width: 600px;
+      height: 20px;
+      margin: 0 auto;
+    }
+    .author .time{
+      float:right;
+    }
+    .article_title{
+      padding: 20px;
+      width: 80%;
+      margin: 0 auto;
+      background-color: #f2f6fc;
+    }
+    .article_content{
+      width: 90%;
+      height: auto;
+      margin: 0 auto;
+    }
+    .article_content p{
+      padding: 10px;
+      line-height: 30px;
+    }
+    .myimg{
+      width: 100%;
+      height: auto;
+    }
+    .game{
+      position: relative;
+      width: 100%;
+      height: 32px;
+      background-color: white;
+      border-bottom: #f2f6fc 1px solid;
+    }
+    .game b{
+     position: relative;
+     top: 6px;
+     left: 5px;
+    }
+    .yxlm{
+      position: relative;
+      width: 100%;
+      background-color: white;
+    }
+    .mylink {
+      position: relative;
+      display:inline-block;
+      width: 100%;
+    }
+  
+    .mylink_title1{
+     
+      position: absolute;
+      top: 0;
+      left:110px;
+      font-size: 20px;
+      text-decoration: none;
+      color:black;
+    }
+    .mylink_text{
+      font-family: Play-Regular;
+      position: absolute;
+      top: 40px;
+      left:110px;
+      font-size: 16px;
+      text-decoration: none;
+      color:black;
+    }
+    .mylink p{
+      position: absolute;
+      text-decoration: none;
+      color: #3264bf;
+      top: 70px;
+      left:95px;
+    }
+    .mylink p span{
+      height: 24px;
+      padding-left: 5px;
+      border-radius: 40px;
+      border: #3264bf 1px solid;
+      margin-left: 10px;
+      padding-left: 5px;
+      padding-right: 5px;
+      padding-bottom: 2px;
+    }
+    .ad{
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+    .myad{
+      display: block;
+      margin:auto;
+    }
+    .art_content_head{
+      background-color: white;
+      height: 30px;
+      border-bottom: #f2f6fc 1px solid;
+    }
+    .art_content_head span{
+      float: right;
+      margin-right: 10px;
+    }
+    .art_content_head b{
+      float: left;
+      margin-left: 5px;
+    }
+    .art_content_text{
+      background-color: white;
+    }
+    .art_content .art_content_text{
+      padding-top: 20px;
+      height: auto;
+    }
+    .art_content_text_link{
+      position: relative;
+      display: block;
+      text-decoration: none;
+
+    }
+    .art_content_text_ul{
+      height: auto;
+    }
+    .art_content_text_ul li{
+      height: 72px;
+      display: block;
+      padding-bottom: 1px;
+      border-bottom: solid 1px #f2f6fc;
+    }
+    .art_content_text_link .text{
+      position: absolute;
+      top:0;
+      left: 100px;;
+      color: black;
+    }
+    .art_content_text_link .text1{
+      position: absolute;
+      top:50px;
+      right: 10px;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  
+    <div id="myapp">
+        <div id = "myHead">
+          <div class="headTitle">
+              <a href="https://www.baidu.com" target="_blank" title="百度" class="imgBox">
+                <img src="/images/logo.png" alt="">
+              </a> 
+          </div>
+          
+          <div class="list">
+            <ul class="ul_type">
+              <li class="li_type">aaa
+              <li class="li_type">bbb
+                  <li class="li_type">ddd
+              <li class="li_type">ccc</li>
+            </ul>
+          </div>
+         <div class="line1">
+
+          </div>
+          <div class="line2">
+
+          </div>
+          <div class="search">
+            <div class="searchBox">
+                <div class="serchIcon">
+                  <img src="/images/ic_search.png" alt="">
+                </div>
+            </div>
+          </div>
+          <div class="login">
+              <span class="mylogin">
+                登录
+              </span>
+              <span class="myRigister">
+                注册
+              </span>
+          </div>
+        </div>
+        <div class="myBody">
+          <div class="leftBody">
+            <div class="image">
+              <img src="/images/aa.jpg" alt="">
+              <h1 class="title">
+                <span>2018英雄联盟全球总决赛数据公布 收视创全新记录</span>
+              </h1>
+            </div>
+            <div class="author">
+              <h5>
+                <span>来源</span>
+                <b>官方</b>
+                <span>作者</span>
+                <b>官方</b>
+                <span class="time">
+                  2018-12-25
+                </span>
+              </h5>
+            </div>
+            <div class="article">
+              <div class="article_title">
+                <p class="head">
+                  在新赛季中，中国LPL赛区将扩大至16支队伍，同时也会进一步在上赛季的基础上强化队伍主场建设，总计五支队伍在本赛季将入驻自己的专属主场进行比赛
+                </p>
+              </div>
+              <div class="article_content">
+                 <p>2018年12月11日，拳头游戏公布了2018英雄联盟全球总决赛的官方收视数据。来自十四个赛区的顶级队伍齐聚年度国际大赛，争相角逐人人梦寐以求的召唤师杯</p>
+                 <p>在韩国仁川举行的全球总决赛决赛上，共有9960万独立观众收看了比赛的内容。同时在线人数峰值达到4400万，平均分钟收视人数为1960万。平均分钟收视数据衡量的是节目任意特定分钟内观看转播的收视平均数，并且通常用于表现大型体育活动的电视收视情况。</p>
+                 <p>在上一个赛季，英雄联盟全球总决赛收视数据峰值为8000万独立观众（半决赛RNG对阵SKT）。</p>
+                <div class="myimg">
+                  <img src="/images/bbb.jpg" alt="" class="myimg">
+                </div>
+                <p>2018年12月11日，拳头游戏公布了2018英雄联盟全球总决赛的官方收视数据。来自十四个赛区的顶级队伍齐聚年度国际大赛，争相角逐人人梦寐以求的召唤师杯</p>
+                <p>2018年12月11日，拳头游戏公布了2018英雄联盟全球总决赛的官方收视数据。来自十四个赛区的顶级队伍齐聚年度国际大赛，争相角逐人人梦寐以求的召唤师杯</p>
+                <p>2018年12月11日，拳头游戏公布了2018英雄联盟全球总决赛的官方收视数据。来自十四个赛区的顶级队伍齐聚年度国际大赛，争相角逐人人梦寐以求的召唤师杯</p>
+                <p>2018年12月11日，拳头游戏公布了2018英雄联盟全球总决赛的官方收视数据。来自十四个赛区的顶级队伍齐聚年度国际大赛，争相角逐人人梦寐以求的召唤师杯</p>
+                <p>2018年12月11日，拳头游戏公布了2018英雄联盟全球总决赛的官方收视数据。来自十四个赛区的顶级队伍齐聚年度国际大赛，争相角逐人人梦寐以求的召唤师杯</p>
+              </div>
+            </div>
+          </div>
+          <div class="rightBody">
+            <div class="game">
+              <b>相关游戏</b>
+            </div>
+            <div class="yxlm">
+              <a href="http://baidu.com" class="mylink">
+                <img src="/images/yxlm.jpg" alt="" class="pic">
+                <h6 class="mylink_title1">英雄联盟</h6>
+                <h6 class="mylink_text">League of Legends</h6>
+                <p>
+                  <span>即时战略游戏</span>
+                  <span>战略游戏</span>
+                </p>
+              
+              </a>
+              
+            </div>
+            <div class="ad">
+              <img src="/images/ad.jpg" alt="" class="myad">
+            </div>
+            <div class="art_content">
+              <div class="art_content_head">
+                <p>
+                  <b>相关新闻</b>
+                  <span>查看更多</span>
+                </p>
+              </div>
+              <div class="art_content_text">
+                <ul class="art_content_text_ul">
+                  <li>
+                      <a href="http://www.baidu.com" class="art_content_text_link">
+                        <img src="images/ccc.jpg" alt="" class="pic">
+                        <p class="text">《英雄联盟》战斗之夜超级福利 100%得永久皮肤</p>
+                        <p class="text1">2018-12-25</p>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://www.baidu.com" class="art_content_text_link">
+                        <img src="images/ccc.jpg" alt="" class="pic">
+                        <p class="text">《英雄联盟》战斗之夜超级福利 100%得永久皮肤</p>
+                        <p class="text1">2018-12-25</p>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://www.baidu.com" class="art_content_text_link">
+                        <img src="images/ccc.jpg" alt="" class="pic">
+                        <p class="text">《英雄联盟》战斗之夜超级福利 100%得永久皮肤</p>
+                        <p class="text1">2018-12-25</p>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://www.baidu.com" class="art_content_text_link">
+                        <img src="images/ccc.jpg" alt="" class="pic">
+                        <p class="text">《英雄联盟》战斗之夜超级福利 100%得永久皮肤</p>
+                        <p class="text1">2018-12-25</p>
+                      </a>
+                  </li>
+                </ul>
+                
+                
+              </div>
+              <div class="art_content_head">
+                  <p>
+                    <b>相关新闻</b>
+                    <span>查看更多</span>
+                  </p>
+              </div>
+              <div class="art_content_text">
+                <ul class="art_content_text_ul">
+                  <li>
+                      <a href="http://www.baidu.com" class="art_content_text_link">
+                        <img src="images/ccc.jpg" alt="" class="pic">
+                        <p class="text">《英雄联盟》战斗之夜超级福利 100%得永久皮肤</p>
+                        <p class="text1">2018-12-25</p>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://www.baidu.com" class="art_content_text_link">
+                        <img src="images/ccc.jpg" alt="" class="pic">
+                        <p class="text">《英雄联盟》战斗之夜超级福利 100%得永久皮肤</p>
+                        <p class="text1">2018-12-25</p>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://www.baidu.com" class="art_content_text_link">
+                        <img src="images/ccc.jpg" alt="" class="pic">
+                        <p class="text">《英雄联盟》战斗之夜超级福利 100%得永久皮肤</p>
+                        <p class="text1">2018-12-25</p>
+                      </a>
+                  </li>
+                  <li>
+                      <a href="http://www.baidu.com" class="art_content_text_link">
+                        <img src="images/ccc.jpg" alt="" class="pic">
+                        <p class="text">《英雄联盟》战斗之夜超级福利 100%得永久皮肤</p>
+                        <p class="text1">2018-12-25</p>
+                      </a>
+                  </li>
+                </ul>
+                
+                
+              </div>
+            </div>
+          </div>
+          <div class="clear" style="clear: both;"></div>
+        </div>
+        <div class="myfoot">
+
+        </div>
+    </div>
+</body>
+</html>

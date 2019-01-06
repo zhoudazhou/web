@@ -1,8 +1,116 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-}
-
-a {
-  color: #00B7FF;
-}
+ html{color:#000;background:#FFF;} 
+      body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form, 
+      fieldset,input,textarea,p,blockquote,th,td { 
+      margin:0; 
+      padding:0; 
+      }
+      .mypage{
+        width:100%;
+      }
+    .page1{
+      background:url(/images/page1_01.jpg) no-repeat center;
+      position: relative;
+      height: 992px;
+      }
+    .btns{
+      width:1200px;
+      height: 81px;
+      text-align: center;
+      margin: 0 auto;
+      padding-top: 800px;
+    }
+    .btns a{
+      
+      display: inline-block;
+      height: 81px;
+      width: 269px;
+      color:white;
+      background: url(/images/btn1.png) no-repeat;
+      line-height: 80px;
+      font-size: 20px;
+      margin-left: 50px;
+      margin-right: 50px;
+      text-decoration: none;
+      transition: all .5s; 
+    }
+    
+    .btns a:hover{
+      background: url(/images/btn2.png) no-repeat;
+    }
+    .page2{
+      
+      background: url(/images/page2_02.jpg) no-repeat center top;
+      margin: 0 auto;
+      height: 808px;
+      width: 1920px;
+      position: relative;
+    }
+    .video{
+      position: relative;
+    }
+    .video a{
+      display: block;
+      width: 686px; 
+      height: 386px;
+      background: url(/images/sp.jpg) no-repeat;
+      position: absolute;
+      top:230px;
+      left:350px;
+    }
+    .page2_content{
+      position: absolute;
+      width: 480px;
+      height: 386px;
+       top:230px;
+      left:1080px;
+      
+    }
+    .page2_content .title{
+      font-size: 30px;
+      color: white;
+      margin-left: 10px;
+    }
+    .page2_content .place{
+      color:white;
+      padding-top: 30px;
+    }
+     .page2_content .time{
+      color:white;
+      padding-top: 10px;
+    }
+    .page2_content .line{
+      
+      background-color: #2a2b38;
+      height: 1px;
+      margin-top: 30px;
+    }
+    .page2_content_text{
+      margin-top: 30px;
+      height: 200px;
+    }
+     .page2_content_text img{
+       margin-right: 10px;
+     }
+    .page2_content_text .link{
+      display: block;
+      height: 30px; 
+      text-decoration: none;  
+      color:#c6cfe5; 
+    }
+    .page2_content_text .link .link_time{
+      color:#c6cfe5; 
+      float: right;
+    }
+    .mytitle{
+      height: 375px;
+      width:122px;
+      background: red;
+      position: fixed;
+      top:100px;
+      right: 0;
+    }
+    .erweima {
+      width: 100px;
+      height: 100px;
+      margin: 0 auto;
+    }
