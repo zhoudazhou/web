@@ -63,7 +63,7 @@
       height: 386px;
        top:230px;
       left:1080px;
-      
+      overflow: hidden;
     }
     .page2_content .title{
       font-size: 30px;
@@ -87,6 +87,7 @@
     .page2_content_text{
       margin-top: 30px;
       height: 200px;
+      
     }
      .page2_content_text img{
        margin-right: 10px;
@@ -96,6 +97,7 @@
       height: 30px; 
       text-decoration: none;  
       color:#c6cfe5; 
+      overflow: hidden;
     }
     .page2_content_text .link .link_time{
       color:#c6cfe5; 
@@ -109,8 +111,38 @@
       top:100px;
       right: 0;
     }
+    .on{
+      background: blue;
+    }
     .erweima {
       width: 100px;
       height: 100px;
       margin: 0 auto;
+    }
+    .page3{
+      background: url(/images/page3_03.jpg) center no-repeat;
+      width: 1920px;
+      height: 590px;
+      margin: 0 auto;
+    }
+    .page4{
+      width: 1920px;
+      height: 688px;
+      margin:  0 auto;
+      background: url(/images/page4_04.jpg) center no-repeat;
+    }
+    .page5{
+      height: 1404px;
+      margin:  0 auto;
+      background: url(/images/page5_05.jpg) center no-repeat;
+    }
+    .page6{
+      height: 1174px;
+      margin:  0 auto;
+      background: url(/images/page6_06.jpg) center no-repeat;
+    }
+    .page7{
+      height: 845px;
+      margin:  0 auto;
+      background: url(/images/page7_07.jpg) center no-repeat;
     }
