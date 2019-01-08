@@ -146,3 +146,36 @@
       margin:  0 auto;
       background: url(/images/page7_07.jpg) center no-repeat;
     }
+    .page4{
+     
+      margin: 0 auto;
+    }
+    .xuanshou{
+      position: relative;
+      background: url(/images/xs-qds.jpg) no-repeat;
+      display: inline-block;
+      width: 282px;
+      height: 362px;
+      border: 4px solid black;
+      margin-left: 30px;
+      cursor: pointer;
+    }
+    .player{
+      height: auto;
+      width: auto;
+      text-align: center;
+      padding-top: 250px;
+    }
+    .xuanshou p{
+      display:block;
+      position: absolute;
+      bottom: 0;
+      left:0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.5);
+      text-align: center;
+      color: white;
+      font-size: 16px;
+      line-height: 40px;
+      
+    }
