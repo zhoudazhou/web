@@ -179,3 +179,44 @@
       line-height: 40px;
       
     }
+    .page5{
+       width: 1920px;
+    }
+    .message{
+     width: 1480px;
+     margin: 0 auto;
+     padding-top: 170px;
+    }
+    .message_content{
+      background: url(/images/blessing-item.png) no-repeat;
+      width: 300px;
+      height: 269px;
+      float:left;
+      margin-left: 50px;
+      margin-top: 20px;
+    }
+    .message_content .mes{
+      color: white;
+      font-size: 16px;
+      text-indent: 25px;
+      width: 230px;
+      height: 160px;
+      margin: 0 auto;
+      padding-top: 30px;
+      text-align: left;
+    }
+    .message_content .name{
+      color: white;
+      margin-left: 53px;
+      margin-top: 12px;
+    }
+    .message_content .mybtn{
+      width: 50px;
+      height: 50px;
+      background: url(/images/pullbtn.png) no-repeat;
+      border:0;
+      outline:0
+    }
+    .mybtn:hover{
+       opacity: .8;
+    }
