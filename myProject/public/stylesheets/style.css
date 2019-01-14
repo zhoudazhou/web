@@ -181,11 +181,13 @@
     }
     .page5{
        width: 1920px;
+       position: relative;
     }
     .message{
      width: 1480px;
      margin: 0 auto;
      padding-top: 170px;
+     height: auto;
     }
     .message_content{
       background: url(/images/blessing-item.png) no-repeat;
@@ -194,6 +196,7 @@
       float:left;
       margin-left: 50px;
       margin-top: 20px;
+      position: relative;
     }
     .message_content .mes{
       color: white;
@@ -215,8 +218,43 @@
       height: 50px;
       background: url(/images/pullbtn.png) no-repeat;
       border:0;
-      outline:0
+      outline:0;
+     
+      margin-left: 230px;
+      margin-top: -10px;
     }
     .mybtn:hover{
-       opacity: .8;
+       opacity:0.8;
+    }
+    .zan{
+      position: absolute;
+      left: 40px;
+      bottom: 20px;
+    }
+   
+     .zhan_text{
+       color:#767a93;
+       font-size: 10px;
+     }
+      .zan_num{
+      color: #e4214f;
+    }
+    .control{
+      width: 1920px;
+      margin: 0 auto;
+      padding-top: 600px;
+      text-align: center;
+    }
+    .control span{
+      display: inline-block;
+      background-color: #bab5e4;
+      color: #333;
+      font-size: 14px;
+      height: 30px;
+      line-height: 30px;
+      margin: 0 4px;
+      cursor: pointer;
+      text-align: center;
+      padding-left: 10px;
+      padding-right: 10px;
     }
