@@ -52,15 +52,14 @@ function getMyList(data){
    
     num++;
     var num2 = data.length % 8;
-    if(num != 1 && num2 > 0){
-        num++;
-    }
+    
     let tempNum = 0;
     if(num < 5){
         tempNum = num;
     }else{
         tempNum = 5;
     }
+    console.log("---temNum",tempNum);
     $(".control").empty();
     let mypage = '<span class="page-prev">上一页</span>'
          +'<span class="page-first">首页</span>';
@@ -75,7 +74,16 @@ function getMyList(data){
          console.log("tag = ",tag.target.innerText);
         clickedMessage(tag.target.innerText);
    }); 
-  
+   var mybtn = $(".mypageBtn");
+        for(let i=0;i<mybtn.length;i++){
+            if((m_currentIndex+1) == parseInt(mybtn[i].innerText)){
+                $(mybtn[i]).css("background","red");
+               
+            }else{
+                  $(mybtn[i]).css("background","#bab5e4");
+                
+            }
+        }
      
 }
 function clickedMessage(data){
@@ -86,11 +94,12 @@ function clickedMessage(data){
         m_currentIndex--;
 
     }else if(data == "首页"){
-        m_currentIndex =1;
+        m_currentIndex =0;
     }else if(data == "下一页"){
         if(m_currentIndex == m_maxIndex){
             return;
         }
+         m_currentIndex++;
     }else if(data == "尾页"){
         m_currentIndex = m_maxIndex;
     }else{
@@ -119,11 +128,68 @@ function showMessage(){
             $(".message").append(txt);  
         }
     }
-    if(m_mydata.length > 40){
-
-    }else{
-
-    }
+        if(m_currentIndex<=2){
+             $(".control").empty();
+            let mypage = '<span class="page-prev">上一页</span>'
+            +'<span class="page-first">首页</span>';
+            for(let i=0;i<5;i++){
+                if(i > m_maxIndex)
+                break;
+            mypage+= '<span class="mypageBtn">'+(i+1)+'</span>';
+            }
+            mypage += '<span class="next">下一页</span>'
+            +'<span class="page-end">尾页</span>';
+            $(".control").append(mypage);
+            $(".control span").click(function(tag){
+                console.log("tag = ",tag.target.innerText);
+                clickedMessage(tag.target.innerText);
+            });  
+        }
+        if(m_currentIndex>= m_maxIndex - 2){
+             $(".control").empty();
+            let mypage = '<span class="page-prev">上一页</span>'
+            +'<span class="page-first">首页</span>';
+            for(let i=m_maxIndex - 4;i<m_maxIndex+1;i++){
+                if(i > m_maxIndex)
+                break;
+            mypage+= '<span class="mypageBtn">'+(i+1)+'</span>';
+            }
+            mypage += '<span class="next">下一页</span>'
+            +'<span class="page-end">尾页</span>';
+            $(".control").append(mypage);
+            $(".control span").click(function(tag){
+                console.log("tag = ",tag.target.innerText);
+                clickedMessage(tag.target.innerText);
+            });  
+        }
+        if(m_currentIndex > 2 && m_currentIndex <= m_maxIndex -2 && m_mydata.length > 40){
+            $(".control").empty();
+            let mypage = '<span class="page-prev">上一页</span>'
+            +'<span class="page-first">首页</span>';
+            for(let i=m_currentIndex-2;i<m_currentIndex+3;i++){
+                if(i > m_maxIndex)
+                break;
+            mypage+= '<span class="mypageBtn">'+(i+1)+'</span>';
+            }
+            mypage += '<span class="next">下一页</span>'
+            +'<span class="page-end">尾页</span>';
+            $(".control").append(mypage);
+            $(".control span").click(function(tag){
+                console.log("tag = ",tag.target.innerText);
+                clickedMessage(tag.target.innerText);
+            });  
+        }
+        var mybtn = $(".mypageBtn");
+        for(let i=0;i<mybtn.length;i++){
+            if((m_currentIndex+1) == parseInt(mybtn[i].innerText)){
+                $(mybtn[i]).css("background","red");
+               
+            }else{
+                  $(mybtn[i]).css("background","#bab5e4");
+                
+            }
+        }
+         
 
 }
 $(window).scroll(function(){
