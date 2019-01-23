@@ -1,6 +1,20 @@
 var m_mydata = null;
 var m_currentIndex = 0;
 var m_maxIndex = 0;
+var m_textdata = ["hahah",
+"中国队加油1",
+"中国队加油2",
+"中国队加油3",
+"中国队加油4",
+"中国队加油5",
+"中国队加油6",
+"中国队加油7",
+"中国队加油8",
+"中国队加油9",
+"中国队加油10",
+"中国队加油11"
+];
+var m_textdataIndex = 0;
 //ajax
 function sendMessage(cb){
      var xmlhttp;
@@ -201,8 +215,15 @@ $(window).scroll(function(){
     }
 })
 
+function getMytextData(){
+   
+    var mynode = $(".gundong_ul");
+    for(let i=0;i<mynode.length;i++){
+
+    }
+}
 $(function(){
    
    sendMessage(getMyList);
-  
+   
 });

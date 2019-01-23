@@ -263,27 +263,43 @@
     }
     .gundong{
       margin: 0 auto;
-      width: 1100px;
+      width: 1200px;
       height: 370px;
       position: relative;
       top:100px;
+      overflow: hidden;
     }
     .gundong_ul{
       padding-top: 30px;
+      display: block;
+      width: 1200px;
+      white-space: nowrap;
     }
     .gundong_li{
-      
+      position: relative;
       display: inline-block; 
-      background-color: #252c5b;
-      color:#c6cfe5;
-      line-height: 40px;
+      /* background-color: #252c5b; */
+      /* color:#c6cfe5; */
       margin-left: 50px;
       padding-left: 40px;
       padding-right: 40px;
+     
+      
+    }
+    .gundong_p{
+      float: left;
+      line-height: 40px;
+      background-color: #252c5b;
+      padding-left: 20px;
+      padding-right: 20px;
       border-top-left-radius: 23px;
       border-bottom-left-radius: 23px;
-      border-top: 0px solid transparent;
-      border-right: 30px solid ;
-      border-bottom: 46px solid transparent;
+      color: white;
+    }
+    .sanjiao{
+      float: left;
+      /* background-color: #252c5b; */
+      border-top: 40px solid transparent;
+      border-left: 40px solid #252c5b;
     }
 
