@@ -269,7 +269,7 @@
       top:100px;
       overflow: hidden;
     }
-    .gundong_ul{
+    .barrage-row{
       padding-top: 30px;
       display: block;
       width: 1200px;
@@ -285,6 +285,9 @@
       padding-right: 40px;
      
       
+    }
+    .data-box{
+      display: none;
     }
     .gundong_p{
       float: left;
@@ -302,4 +305,52 @@
       border-top: 40px solid transparent;
       border-left: 40px solid #252c5b;
     }
+    .choujiang{
+      margin: 0 auto;
+      width: 1200px;
+      height: 370px;
+      position: relative;
+      top:210px;
+    }
+    .myblock {
+      position: relative;
+      left: 1px;;
+      top:4px;
+      width: 640px;
+      height: 417px;
+     
+    }
+    .block_item{
+      position: relative;
+      margin-top: 2px;
+      margin-right:2px;
+      margin-left: 3px;
+      margin-bottom: 3px;
+      float: left;
+      width: 205px;
+      height: 131px;
+      background: #252c5b;
+      
+    }
+    .block_item1{
+      position: relative;
+      margin-top: 2px;
+      margin-right:2px;
+      margin-left: 3px;
+      margin-bottom: 3px;
+      float: left;
+      width: 205px;
+      height: 131px;
+      background: #252c5b;
+      
+    }
+    .block_item_on{
+      background:red;
+    }
+    .try{
+      position: relative;
+      top:3px;
+      left: 3px;
+    }
+    
 

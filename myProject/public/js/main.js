@@ -1,6 +1,8 @@
 var m_mydata = null;
 var m_currentIndex = 0;
 var m_maxIndex = 0;
+var interval = null;
+var flag = 0;
 var m_textdata = ["hahah",
 "中国队加油1",
 "中国队加油2",
@@ -12,7 +14,39 @@ var m_textdata = ["hahah",
 "中国队加油8",
 "中国队加油9",
 "中国队加油10",
-"中国队加油11"
+"中国队加油11",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10",
+"中国队加油10"
 ];
 var m_textdataIndex = 0;
 //ajax
@@ -218,12 +252,62 @@ $(window).scroll(function(){
 function getMytextData(){
    
     var mynode = $(".gundong_ul");
-    for(let i=0;i<mynode.length;i++){
+    for(let i=0;i<m_textdata.length;i++){
+        var index = i%3;
 
     }
+}
+function getMyGunDongData(){
+   
+            html = [];
+        for(var i=0,len = m_textdata.length;i<len;++i){
+          var className = Math.random() > 0.5? 'on' : '';
+
+          html.push(' <li class="gundong_li">');
+          html.push(' <p class ="gundong_p">'+m_textdata[i]+'</p>');
+          html.push('  <div class = "sanjiao"></div>');
+          html.push('</li>');
+        }
+
+        $('#data').html(html.join(''));
+
+        new Barrage('#j-barrage-left', {
+          dataBox : "#data",
+          speed: 2,
+          row: 5,
+          number: 40,
+          hoverStop: true,
+          direction: "left",
+          margin: [60, 300],
+        });
+}
+function zhuanpan(num){
+    console.log("hahaah = ");
+    block_item = $('.block_item');
+    for(var i= 0;i<block_item.length;i++){
+        if($(block_item[i]).hasClass("block_item_on")){
+            $(block_item[i]).removeClass("block_item_on");
+        }
+    }
+        
+       $(block_item[(flag++)%8]).addClass("block_item_on");
+       
+       if(flag == num){
+           flag=0;
+        console.log("aaaaaaaaaa");
+          window.clearInterval(interval);
+       }
+    
 }
 $(function(){
    
    sendMessage(getMyList);
-   
+   getMyGunDongData();
+    var block_item = $('.block_item1');
+    $(block_item[0]).click(function(){
+        var num = parseInt(9*Math.random()+32);
+        console.log("---flag = ",flag);
+        interval = window.setInterval("zhuanpan("+num+")",100);//两秒加载
+     
+    })
 });
