@@ -240,7 +240,8 @@ function showMessage(){
          
 
 }
-config = [992,808,590,688,1404,1174,845];
+config = [1000,1800,2456,3138,4487,5580];
+//1000 1845 2456 3138  4487 5300
 $(window).scroll(function(){
     var scrollHeight = $(this).scrollTop();
     console.log(scrollHeight+"-----");
@@ -248,10 +249,10 @@ $(window).scroll(function(){
   
     var index = 0;
     var sum = 0;
-    for(var i=0;i<config.length;i++){
+    for(var i=config.length-1;i>=0;i--){
         
-        sum += config[i];
-        if(sum < scrollHeight && scrollHeight < sum +  (i==(config.length-1)?0:config[i+1])  ){
+        sum = config[i];
+        if(sum <= scrollHeight ){
             index = i;
             var mybtn =  $(".xianchang");
             for(var i=0;i<mybtn.length;i++){
@@ -320,6 +321,14 @@ function zhuanpan(num){
        }
     
 }
+function windowScollTo(i){
+   
+     $('html,body').animate({
+
+        scrollTop: config[i]
+
+    },500);
+}
 $(function(){
    //xuanshou 
    var node = $('.xuanshou');
@@ -332,7 +341,15 @@ $(function(){
         $(e.target.children[0]).css({"background":"rgba(0,0,0, 0.5)"});
        })
    }
-  
+  var daohangNode = $('.daohang_line');
+  function myclick(i){
+    $(daohangNode[i]).click(function(e){
+        windowScollTo(i);    
+    })
+  }
+   for(var i=0;i<daohangNode.length;i++){
+        myclick(i);
+   }
    sendMessage(getMyList);
    getMyGunDongData();
     var block_item = $('.block_item1');
