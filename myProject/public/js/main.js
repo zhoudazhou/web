@@ -240,13 +240,34 @@ function showMessage(){
          
 
 }
+config = [992,808,590,688,1404,1174,845];
 $(window).scroll(function(){
     var scrollHeight = $(this).scrollTop();
     console.log(scrollHeight+"-----");
-    if(scrollHeight > 400){
-        console.log("-----");
-        $(".mytitle").addClass("on");
+    console.log("-------windows height = ",$(document).height());
+  
+    var index = 0;
+    var sum = 0;
+    for(var i=0;i<config.length;i++){
+        
+        sum += config[i];
+        if(sum < scrollHeight && scrollHeight < sum +  (i==(config.length-1)?0:config[i+1])  ){
+            index = i;
+            var mybtn =  $(".xianchang");
+            for(var i=0;i<mybtn.length;i++){
+                $(mybtn[i]).removeClass('on');
+            }
+            $(mybtn[index]).addClass("on");
+            break;
+        }
     }
+  
+    // page1 992 808 590  688 1404  1174 845
+    // $('html,body').animate({
+
+    //     scrollTop: 1800
+
+    // },5000);
 })
 
 function getMytextData(){
@@ -300,7 +321,18 @@ function zhuanpan(num){
     
 }
 $(function(){
-   
+   //xuanshou 
+   var node = $('.xuanshou');
+   for(var i=0;i<node.length;i++){
+    $(node[i]).hover(function(e){
+        $(e.target).css({"transform":"translateY(-50px)","border":"4px solid red"});
+        $(e.target.children[0]).css({"background":"rgba(255,0,0, 0.5)"});
+       },function(e){
+        $(e.target).css({"transform":"translateY(0px)","border":"4px solid black"});
+        $(e.target.children[0]).css({"background":"rgba(0,0,0, 0.5)"});
+       })
+   }
+  
    sendMessage(getMyList);
    getMyGunDongData();
     var block_item = $('.block_item1');
