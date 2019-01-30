@@ -11,6 +11,8 @@
       background:url(/images/page1_01.jpg) no-repeat center;
       position: relative;
       height: 992px;
+      margin: 0 auto;
+      width: 1920px;
       }
     .btns{
       width:1200px;
@@ -130,16 +132,19 @@
       background: url(/images/page4_04.jpg) center no-repeat;
     }
     .page5{
+      width: 1920px;
       height: 1404px;
       margin:  0 auto;
       background: url(/images/page5_05.jpg) center no-repeat;
     }
     .page6{
+      width: 1920px;
       height: 1174px;
       margin:  0 auto;
       background: url(/images/page6_06.jpg) center no-repeat;
     }
     .page7{
+      width: 1920px;
       height: 845px;
       margin:  0 auto;
       background: url(/images/page7_07.jpg) center no-repeat;
